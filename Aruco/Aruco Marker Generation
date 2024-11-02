@@ -14,12 +14,10 @@ fig = plt.figure(figsize=(12,5))
 plt.suptitle("Aruco Markers", fontsize=14, fontweight='bold')
 fig.patch.set_facecolor('silver')
 
-#first step is to create a dictionary object
-#We will create a dictionary composed od=f 250 markers
-#Each marker is 7x7 bits
+
 aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_7X7_250)
 
-#We can draw markers using cv2.aruco.drawMarker()
+
 #The function 'cv2.aruco.drawMarker()' returns the marker image ready to be printed (in a canonical form)
 aruco_marker_1 = cv2.aruco.generateImageMarker(dictionary=aruco_dict, id=2, sidePixels=600, borderBits=1)
 aruco_marker_2 = cv2.aruco.generateImageMarker(dictionary=aruco_dict, id=2, sidePixels=600, borderBits=2)
